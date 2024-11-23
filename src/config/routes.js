@@ -1,5 +1,5 @@
-import Home from "../pages/Home.jsx";
-import Gallery from "../pages/Gallery.jsx";
+import Home from "../pages/Home/Home.jsx";
+import Gallery from "../pages/Gallery/Gallery.jsx";
 import InteractiveGame from "../pages/InteractiveGame.jsx";
 
 export const routes = {

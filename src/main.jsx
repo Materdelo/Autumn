@@ -12,14 +12,10 @@ createRoot(document.getElementById("root")).render(
       <CssBaseline />
       <Router>
         <Routes>
-          {Object.values(routes).map((route) => {
+          {Object.values(routes).map((route, index) => {
             const Component = route.component;
             return (
-              <Route
-                key={route.name}
-                path={route.url}
-                element={<Component />}
-              />
+              <Route key={index} path={route.url} element={<Component />} />
             );
           })}
         </Routes>
