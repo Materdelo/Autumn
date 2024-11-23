@@ -11,6 +11,13 @@ export default function Item({ label, href }) {
         color: "#512212",
         textTransform: "uppercase",
         fontWeight: "bold",
+        "&:hover": {
+          opacity: 0.6,
+        },
+        "&:active": {
+          opacity: 0.4,
+        },
+        transition: "0.2s",
       }}
     >
       {label}
