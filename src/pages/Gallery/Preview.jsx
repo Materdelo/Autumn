@@ -3,10 +3,14 @@ import { PiX } from "react-icons/pi";
 
 export default function Preview({ open, onClose, selected }) {
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="lg">
+    <Dialog open={open} onClose={onClose} maxWidth="1920">
       <Box sx={{ textAlign: "center", height: "90vh", overflowY: "hidden" }}>
         <IconButton
-          sx={{ position: "absolute", right: 0, top: 0 }}
+          sx={{
+            position: "absolute",
+            right: 0,
+            top: 0,
+          }}
           onClick={onClose}
         >
           <PiX />
