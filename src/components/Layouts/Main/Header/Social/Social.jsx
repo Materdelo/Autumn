@@ -17,7 +17,7 @@ export default function Social() {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ display: "flex", gap: 4 }}>
+    <Box sx={{ display: { xs: "none", lg: "flex" }, gap: 4 }}>
       <Item
         label="Kontakt"
         icon={<LocalPhone sx={{ fontSize: "16px" }} />}

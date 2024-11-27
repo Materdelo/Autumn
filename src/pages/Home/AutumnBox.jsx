@@ -10,6 +10,7 @@ export default function AutumnBox() {
         gap: 6,
         alignItems: "center",
         flex: 1,
+        pt: 15,
       }}
     >
       <Box
@@ -57,7 +58,7 @@ export default function AutumnBox() {
           sx={{
             fontSize: 18,
             mt: 2,
-            px: 10,
+            px: { xs: 2, sm: 5, md: 10 },
             lineHeight: "18px",
             textAlign: "center",
             fontWeight: 300,
@@ -70,13 +71,19 @@ export default function AutumnBox() {
           ullamcorper ultrices metus.
         </Typography>
       </Box>
-      <Box sx={{ display: "flex", gap: 2 }}>
-        <Link href={routes.interactive_game.url}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          gap: 2,
+        }}
+      >
+        <Link href={routes.interactive_game.url} sx={{ flex: 1 }}>
           <Button variant="contained" sx={{ width: 250 }}>
             Poznaj naszą grę
           </Button>
         </Link>
-        <Link href={routes.gallery.url}>
+        <Link href={routes.gallery.url} sx={{ flex: 1 }}>
           <Button variant="outlined" sx={{ width: 250 }}>
             Galeria
           </Button>

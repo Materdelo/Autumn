@@ -5,7 +5,9 @@ export default function Main({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main style={{ maxWidth: "2140px", width: "100%", margin: "0 auto" }}>
+        {children}
+      </main>
       <Footer />
     </>
   );
