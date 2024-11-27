@@ -9,31 +9,32 @@ import {
 } from "@mui/icons-material";
 import { useContext } from "react";
 import { ThemeContext } from "../../../../Providers/ThemeProvider.jsx";
+import { useNavigate } from "react-router-dom";
+import { routes } from "../../../../../config/routes.js";
 
 export default function Social() {
   const { theme, handleToggleTheme } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   return (
     <Box sx={{ display: "flex", gap: 4 }}>
       <Item
         label="Kontakt"
         icon={<LocalPhone sx={{ fontSize: "16px" }} />}
-        onClick={() => {
-          console.log("nigger");
-        }}
+        onClick={() => {}}
       />
       <Item
         label="Galeria"
         icon={<InsertPhoto sx={{ fontSize: "16px" }} />}
         onClick={() => {
-          console.log("nigger");
+          navigate(routes.gallery.url);
         }}
       />
       <Item
         label="Gra interaktywna"
         icon={<VideogameAsset sx={{ fontSize: "16px" }} />}
         onClick={() => {
-          console.log("nigger");
+          navigate(routes.interactive_game.url);
         }}
       />
       <Item
