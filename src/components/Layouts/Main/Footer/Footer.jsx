@@ -16,17 +16,18 @@ export default function Footer() {
         color: "white",
       }}
     >
-      <Box sx={{ flex: 1 }}>nigger</Box>
+      <Box sx={{ flex: 1, maxWidth: "1440px", width: "100%" }}>nigger</Box>
       <Divider flexItem orientation="horizontal" color={"#7e2b22"} />
       <Box
         sx={{
-          width: "100%",
           p: 2,
           px: 3,
           height: "60px",
           display: "flex",
           justifyContent: "space-between",
           gap: 2,
+          maxWidth: "1440px",
+          width: "100%",
         }}
       >
         <Box
