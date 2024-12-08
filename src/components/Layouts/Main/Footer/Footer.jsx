@@ -1,6 +1,7 @@
-import { Box, Divider, Typography } from "@mui/material";
+import {Box, Divider} from "@mui/material";
 
-import icon from "../../../../assets/icon.png";
+import BottomFooter from "./ButtomFooter/Bottomfooter.jsx";
+import MainFooter from "./MainFooter/MainFooter.jsx";
 
 export default function Footer() {
   return (
@@ -16,42 +17,9 @@ export default function Footer() {
         color: "white",
       }}
     >
-      <Box sx={{ flex: 1, maxWidth: "1440px", width: "100%" }}>nigger</Box>
+      <MainFooter />
       <Divider flexItem orientation="horizontal" color={"#7e2b22"} />
-      <Box
-        sx={{
-          p: 2,
-          px: 3,
-          height: "60px",
-          display: "flex",
-          justifyContent: "space-between",
-          gap: 2,
-          maxWidth: "1440px",
-          width: "100%",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: 1.5,
-          }}
-        >
-          <img
-            src={icon}
-            alt="icon"
-            style={{ height: "100%", width: "auto", color: "#7e2b22" }}
-          />
-          <Typography sx={{ fontFamily: "Autumn2", color: "#9e4b42" }}>
-            Poszukujemy jesieni
-          </Typography>
-        </Box>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Typography sx={{ fontSize: 12, color: "#9e4b42" }}>
-            Wcale tego nie chcemy, lato lepsze
-          </Typography>
-        </Box>
-      </Box>
+      <BottomFooter />
     </Box>
   );
 }
