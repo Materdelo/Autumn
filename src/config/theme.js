@@ -20,6 +20,10 @@ export const lightTheme = {
       main: "#5e0b02",
       contrastText: "white",
     },
+    secondary: {
+      main: "#7d2c22",
+      contrastText: "white",
+    },
     text: {
       primary: "#512212",
     },
@@ -36,6 +40,10 @@ export const darkTheme = {
     },
     primary: {
       main: "#5e0b02",
+      contrastText: "white",
+    },
+    secondary: {
+      main: "#7d2c22",
       contrastText: "white",
     },
     text: {
