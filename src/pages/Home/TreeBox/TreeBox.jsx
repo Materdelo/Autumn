@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 
 import tree from "../../../assets/tree.png";
@@ -14,10 +14,39 @@ import image_9 from "../../../assets/listki/9.png";
 import { useEffect, useRef, useState } from "react";
 
 export default function TreeBox() {
-  const dickRef = useRef(null);
-  const [clientHeight, setClientHeight] = useState(0);
+  const theme = useTheme();
+  const isMedium = useMediaQuery(theme.breakpoints.only("md"));
+  const isSmall = useMediaQuery(theme.breakpoints.only("sm"));
+  const isExtraSmall = useMediaQuery(theme.breakpoints.only("xs"));
 
   const leaves = [
+    image_1,
+    image_2,
+    image_3,
+    image_4,
+    image_5,
+    image_6,
+    image_7,
+    image_8,
+    image_9,
+    image_1,
+    image_2,
+    image_3,
+    image_4,
+    image_5,
+    image_6,
+    image_7,
+    image_8,
+    image_9,
+    image_1,
+    image_2,
+    image_3,
+    image_4,
+    image_5,
+    image_6,
+    image_7,
+    image_8,
+    image_9,
     image_1,
     image_2,
     image_3,
@@ -31,11 +60,6 @@ export default function TreeBox() {
 
   const randomBetween = (min, max) => Math.random() * (max - min) + min;
 
-  useEffect(() => {
-    console.log(dickRef.current?.height);
-    setClientHeight(dickRef.current?.height || 0);
-  }, [dickRef.current.height]);
-
   return (
     <Box
       sx={{
@@ -47,41 +71,45 @@ export default function TreeBox() {
       }}
     >
       <Box
-        ref={dickRef}
         component="img"
         src={tree}
         alt="tree"
         sx={{
-          height: { xs: "auto", lg: "100%" },
-          width: { xs: "100%", lg: "auto" },
+          height: { xs: "400px", sm: "600px", md: "800px", lg: "100%" },
+          width: { xs: "auto", lg: "auto" },
+          zIndex: 3,
         }}
       />
-      {clientHeight > 0 && (
-        <Box className="leaves">
-          {leaves.map((leaf, index) => (
-            <motion.img
-              key={index}
-              src={leaf}
-              alt="Leaf"
-              className="leaf"
-              initial={{
-                x: randomBetween(-300, 300),
-                y: 10,
-                rotate: randomBetween(0, 360),
-              }}
-              animate={{
-                x: randomBetween(-300, 300),
-                y: clientHeight,
-                rotate: randomBetween(360, 720),
-              }}
-              transition={{
-                duration: randomBetween(3, 6),
-                repeat: Infinity,
-              }}
-            />
-          ))}
-        </Box>
-      )}
+      <Box className="leaves">
+        {leaves.map((leaf, index) => (
+          <motion.img
+            key={index}
+            src={leaf}
+            alt="Leaf"
+            className="leaf"
+            initial={{
+              x: randomBetween(
+                -(isSmall ? 200 : isExtraSmall ? 150 : 300),
+                isSmall ? 200 : isExtraSmall ? 150 : 300,
+              ),
+              y: isMedium ? 500 : isSmall ? 400 : isExtraSmall ? 250 : 420,
+              rotate: randomBetween(0, 360),
+            }}
+            animate={{
+              x: randomBetween(
+                -(isSmall ? 200 : isExtraSmall ? 150 : 300),
+                isSmall ? 200 : isExtraSmall ? 150 : 300,
+              ),
+              y: isMedium ? 700 : isSmall ? 540 : isExtraSmall ? 350 : 550,
+              rotate: randomBetween(360, 720),
+            }}
+            transition={{
+              duration: randomBetween(3, 6),
+              repeat: Infinity,
+            }}
+          />
+        ))}
+      </Box>
     </Box>
   );
 }
