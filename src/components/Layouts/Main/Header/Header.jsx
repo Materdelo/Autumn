@@ -12,6 +12,9 @@ export default function Header() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        maxWidth: "2140px",
+        width: "100%",
+        margin: "0 auto",
       }}
     >
       <Navigation />

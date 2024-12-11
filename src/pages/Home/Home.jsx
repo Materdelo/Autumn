@@ -1,7 +1,7 @@
 import Main from "../../components/Layouts/Main/Main.jsx";
 import AutumnBox from "./AutumnBox.jsx";
 import { Box } from "@mui/material";
-import TreeBox from "./TreeBox.jsx";
+import TreeBox from "./TreeBox/TreeBox.jsx";
 
 export default function Home() {
   return (

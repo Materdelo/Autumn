@@ -1,4 +1,4 @@
-import {Box, Divider} from "@mui/material";
+import { Box, Divider } from "@mui/material";
 
 import BottomFooter from "./ButtomFooter/Bottomfooter.jsx";
 import MainFooter from "./MainFooter/MainFooter.jsx";
@@ -9,7 +9,7 @@ export default function Footer() {
       component="footer"
       sx={{
         width: "100%",
-        height: "400px",
+        minHeight: "400px",
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#512212",

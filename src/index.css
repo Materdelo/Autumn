@@ -17,3 +17,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.leaf {
+  position: absolute;
+  width: 40px;
+  opacity: 0.8;
+}
