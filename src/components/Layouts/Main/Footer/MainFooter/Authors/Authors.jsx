@@ -36,7 +36,7 @@ export default function Authors() {
             <IconButton href="https://github.com/Miloszkh" target="_blank">
               <GitHubIcon />
             </IconButton>
-            Miłosz wiejak
+            Miłosz Wiejak
           </li>
         </ul>
       </Box>
